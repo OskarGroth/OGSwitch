@@ -8,16 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		750F2E3E1E5D2CD000C20E79 /* OGSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = 750F2E3C1E5D2CD000C20E79 /* OGSwitch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		750F2E451E5D2CE100C20E79 /* OGSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750F2E441E5D2CE100C20E79 /* OGSwitch.swift */; };
+		750F2E4D1E5D2D7100C20E79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750F2E4C1E5D2D7100C20E79 /* AppDelegate.swift */; };
+		750F2E4F1E5D2D7100C20E79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 750F2E4E1E5D2D7100C20E79 /* Assets.xcassets */; };
+		750F2E521E5D2D7200C20E79 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 750F2E501E5D2D7200C20E79 /* MainMenu.xib */; };
+		750F2E581E5D2F6300C20E79 /* OGSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750F2E441E5D2CE100C20E79 /* OGSwitch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		750F2E391E5D2CD000C20E79 /* OGSwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OGSwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		750F2E3C1E5D2CD000C20E79 /* OGSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OGSwitch.h; sourceTree = "<group>"; };
 		750F2E3D1E5D2CD000C20E79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		750F2E441E5D2CE100C20E79 /* OGSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGSwitch.swift; sourceTree = "<group>"; };
+		750F2E4A1E5D2D7100C20E79 /* OGSwitchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OGSwitchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		750F2E4C1E5D2D7100C20E79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		750F2E4E1E5D2D7100C20E79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		750F2E511E5D2D7200C20E79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		750F2E531E5D2D7200C20E79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		750F2E351E5D2CD000C20E79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		750F2E471E5D2D7100C20E79 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -31,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				750F2E3B1E5D2CD000C20E79 /* OGSwitch */,
+				750F2E4B1E5D2D7100C20E79 /* OGSwitchDemo */,
 				750F2E3A1E5D2CD000C20E79 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				750F2E391E5D2CD000C20E79 /* OGSwitch.framework */,
+				750F2E4A1E5D2D7100C20E79 /* OGSwitchDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -47,9 +67,21 @@
 			isa = PBXGroup;
 			children = (
 				750F2E3C1E5D2CD000C20E79 /* OGSwitch.h */,
+				750F2E441E5D2CE100C20E79 /* OGSwitch.swift */,
 				750F2E3D1E5D2CD000C20E79 /* Info.plist */,
 			);
 			path = OGSwitch;
+			sourceTree = "<group>";
+		};
+		750F2E4B1E5D2D7100C20E79 /* OGSwitchDemo */ = {
+			isa = PBXGroup;
+			children = (
+				750F2E4C1E5D2D7100C20E79 /* AppDelegate.swift */,
+				750F2E4E1E5D2D7100C20E79 /* Assets.xcassets */,
+				750F2E501E5D2D7200C20E79 /* MainMenu.xib */,
+				750F2E531E5D2D7200C20E79 /* Info.plist */,
+			);
+			path = OGSwitchDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,16 +116,40 @@
 			productReference = 750F2E391E5D2CD000C20E79 /* OGSwitch.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		750F2E491E5D2D7100C20E79 /* OGSwitchDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 750F2E541E5D2D7200C20E79 /* Build configuration list for PBXNativeTarget "OGSwitchDemo" */;
+			buildPhases = (
+				750F2E461E5D2D7100C20E79 /* Sources */,
+				750F2E471E5D2D7100C20E79 /* Frameworks */,
+				750F2E481E5D2D7100C20E79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OGSwitchDemo;
+			productName = OGSwitchDemo;
+			productReference = 750F2E4A1E5D2D7100C20E79 /* OGSwitchDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		750F2E301E5D2CD000C20E79 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Oskar Groth";
 				TargetAttributes = {
 					750F2E381E5D2CD000C20E79 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = ZQK6SX26CE;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+					750F2E491E5D2D7100C20E79 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = ZQK6SX26CE;
 						ProvisioningStyle = Automatic;
@@ -106,6 +162,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 750F2E2F1E5D2CD000C20E79;
 			productRefGroup = 750F2E3A1E5D2CD000C20E79 /* Products */;
@@ -113,6 +170,7 @@
 			projectRoot = "";
 			targets = (
 				750F2E381E5D2CD000C20E79 /* OGSwitch */,
+				750F2E491E5D2D7100C20E79 /* OGSwitchDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -125,6 +183,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		750F2E481E5D2D7100C20E79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				750F2E4F1E5D2D7100C20E79 /* Assets.xcassets in Resources */,
+				750F2E521E5D2D7200C20E79 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -132,10 +199,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				750F2E451E5D2CE100C20E79 /* OGSwitch.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		750F2E461E5D2D7100C20E79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				750F2E4D1E5D2D7100C20E79 /* AppDelegate.swift in Sources */,
+				750F2E581E5D2F6300C20E79 /* OGSwitch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		750F2E501E5D2D7200C20E79 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				750F2E511E5D2D7200C20E79 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		750F2E3F1E5D2CD000C20E79 /* Debug */ = {
@@ -237,6 +325,30 @@
 		750F2E421E5D2CD000C20E79 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ZQK6SX26CE;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = OGSwitch/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.cindori.OGSwitch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		750F2E431E5D2CD000C20E79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -253,25 +365,32 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
-			name = Debug;
+			name = Release;
 		};
-		750F2E431E5D2CD000C20E79 /* Release */ = {
+		750F2E551E5D2D7200C20E79 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = ZQK6SX26CE;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = OGSwitch/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.cindori.OGSwitch;
+				INFOPLIST_FILE = OGSwitchDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.cindori.OGSwitchDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		750F2E561E5D2D7200C20E79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = ZQK6SX26CE;
+				INFOPLIST_FILE = OGSwitchDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.cindori.OGSwitchDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -293,6 +412,14 @@
 			buildConfigurations = (
 				750F2E421E5D2CD000C20E79 /* Debug */,
 				750F2E431E5D2CD000C20E79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		750F2E541E5D2D7200C20E79 /* Build configuration list for PBXNativeTarget "OGSwitchDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				750F2E551E5D2D7200C20E79 /* Debug */,
+				750F2E561E5D2D7200C20E79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
