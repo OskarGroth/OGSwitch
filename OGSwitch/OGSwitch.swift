@@ -26,7 +26,7 @@ public class OGSwitch : NSControl {
     let kDecreasedGoldenRatio:CGFloat = 1.38
     let kEnabledOpacity:Float = 1.0
     let kDisabledOpacity:Float = 0.5
-    public var isOn:Bool = true
+    public var isOn:Bool = false
     public var isActive:Bool = false
     public var hasDragged:Bool  = false
     public var isDraggingTowardsOn:Bool = false
@@ -257,7 +257,6 @@ public class OGSwitch : NSControl {
         }
         
         if isOn != on {
-            Swift.print("Now: \(on)")
             if action != nil {
                 NSApp.sendAction(action!, to: target, from: self)
             }
