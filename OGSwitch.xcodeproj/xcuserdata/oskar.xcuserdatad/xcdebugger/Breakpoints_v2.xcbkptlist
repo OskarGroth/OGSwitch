@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OGSwitch/OGSwitch.swift"
-            timestampString = "509433964.924479"
+            timestampString = "509792812.217359"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "setupIcon()"
             landmarkType = "7">
             <Locations>

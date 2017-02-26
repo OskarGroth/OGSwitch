@@ -695,6 +695,7 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="image" keyPath="inactiveIcon" value="NSEnterFullScreenTemplate"/>
                             <userDefinedRuntimeAttribute type="image" keyPath="activeIcon" value="NSBookmarksTemplate"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="ignoreRatio" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </customView>
                 </subviews>

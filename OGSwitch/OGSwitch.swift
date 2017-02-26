@@ -19,6 +19,7 @@ public class OGSwitch : NSControl {
     @IBInspectable public var animationDuration: TimeInterval = 0.4
     @IBInspectable public var inactiveIcon: NSImage?
     @IBInspectable public var activeIcon: NSImage?
+    @IBInspectable public var ignoreRatio: Bool = false
     
     let kBorderLineWidth:CGFloat = 1.0
     let kGoldenRatio:CGFloat = 1.6180339875
@@ -60,8 +61,8 @@ public class OGSwitch : NSControl {
     
     public override func awakeFromNib() {
         super.awakeFromNib()
+        reloadLayerSize()
         setupIcon()
-
     }
     
     internal func setupIcon() {
@@ -187,13 +188,17 @@ public class OGSwitch : NSControl {
         var width = 0.0
         
         let bounds: CGRect = backgroundLayer!.bounds
-        
-        if  isActive {
-            width = Double((bounds.width - 2.0 * kBorderLineWidth) / kGoldenRatio)
+        if ignoreRatio {
+            width = Double(height)
+        } else {
+            if  isActive {
+                width = Double((bounds.width - 2.0 * kBorderLineWidth) / kGoldenRatio)
+            }
+            else {
+                width = Double((bounds.width - 2.0 * kBorderLineWidth) / kDecreasedGoldenRatio)
+            }
         }
-        else {
-            width = Double((bounds.width - 2.0 * kBorderLineWidth) / kDecreasedGoldenRatio)
-        }
+
         
         var x:CGFloat = 0
         if (!hasDragged && !isOn) || (hasDragged && !isDraggingTowardsOn) {
