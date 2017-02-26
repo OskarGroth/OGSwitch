@@ -689,12 +689,20 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ME7-To-eFM" customClass="OGSwitch" customModule="OGSwitchDemo" customModuleProvider="target">
-                        <rect key="frame" x="159" y="144" width="163" height="96"/>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M7z-uc-a7v" customClass="OGSwitch" customModule="OGSwitchDemo" customModuleProvider="target">
+                        <rect key="frame" x="129" y="161" width="163" height="96"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="inactiveIcon" value="NSEnterFullScreenTemplate"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="activeIcon" value="NSBookmarksTemplate"/>
+                        </userDefinedRuntimeAttributes>
                     </customView>
                 </subviews>
             </view>
         </window>
     </objects>
+    <resources>
+        <image name="NSBookmarksTemplate" width="17" height="18"/>
+        <image name="NSEnterFullScreenTemplate" width="15" height="15"/>
+    </resources>
 </document>

@@ -17,6 +17,8 @@ public class OGSwitch : NSControl {
     @IBInspectable public var disabledBackgroundColor: NSColor = NSColor.clear
     @IBInspectable public var inactiveBackgroundColor: NSColor = NSColor(calibratedWhite: 0.0, alpha:0.3)
     @IBInspectable public var animationDuration: TimeInterval = 0.4
+    @IBInspectable public var inactiveIcon: NSImage?
+    @IBInspectable public var activeIcon: NSImage?
     
     let kBorderLineWidth:CGFloat = 1.0
     let kGoldenRatio:CGFloat = 1.6180339875
@@ -31,6 +33,7 @@ public class OGSwitch : NSControl {
     public var backgroundLayer:CALayer?
     public var knobLayer: CALayer?
     public var knobInsideLayer: CALayer?
+    public var iconLayer = CALayer()
     
     override public var acceptsFirstResponder: Bool {
         get {
@@ -55,10 +58,36 @@ public class OGSwitch : NSControl {
         setupLayers()
     }
     
+    public override func awakeFromNib() {
+        super.awakeFromNib()
+        setupIcon()
+
+    }
+    
+    internal func setupIcon() {
+        guard let icon = inactiveIcon, let bounds = knobLayer?.bounds else {
+            return
+        }
+        let size = icon.size
+        iconLayer.frame = NSMakeRect((bounds.width-size.width)/2, (bounds.height-size.height)/2, size.width, size.height)
+        iconLayer.contents = icon
+    }
+    
+    internal func animateImage() {
+        let animation = CABasicAnimation(keyPath: "contents")
+        animation.toValue = isOn ? activeIcon : inactiveIcon
+        animation.fromValue = iconLayer.contents
+        animation.duration = 0.5
+        animation.isRemovedOnCompletion = false
+        animation.fillMode = kCAFillModeForwards
+        iconLayer.add(animation, forKey: "contents")
+        iconLayer.setValue(animation.toValue, forKey: "contents")
+    }
+    
     internal func setupLayers() {
         rootLayer = CALayer()
         layer = rootLayer
-        
+
         wantsLayer = true
         
         backgroundLayer = CALayer()
@@ -77,11 +106,15 @@ public class OGSwitch : NSControl {
         knobLayer!.shadowOffset = CGSize(width:0.0, height:-2.0)
         knobLayer!.shadowRadius = 1.0
         knobLayer!.shadowOpacity = 0.3
+        
         rootLayer!.addSublayer(knobLayer!)
         
         knobInsideLayer = CALayer()
         knobInsideLayer!.frame = knobLayer!.bounds
         knobInsideLayer!.autoresizingMask = [.layerHeightSizable, .layerWidthSizable]
+        
+        iconLayer = CALayer()
+        knobInsideLayer?.addSublayer(iconLayer)
         
         knobInsideLayer!.shadowColor = NSColor.black.cgColor
         knobInsideLayer!.shadowOffset = CGSize(width:0.0, height:0.0)
@@ -89,6 +122,7 @@ public class OGSwitch : NSControl {
         knobInsideLayer!.shadowRadius = 1.0
         knobInsideLayer!.shadowOpacity = 0.35
         knobLayer!.addSublayer(knobInsideLayer!)
+        
         
         reloadLayerSize()
         reloadLayer()
@@ -137,6 +171,7 @@ public class OGSwitch : NSControl {
         knobInsideLayer!.frame = knobLayer!.bounds
         
         CATransaction.commit()
+        animateImage()
     }
     
     public func reloadLayer() {
