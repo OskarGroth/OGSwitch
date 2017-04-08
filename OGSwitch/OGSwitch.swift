@@ -257,12 +257,14 @@ public class OGSwitch : NSControl {
         }
         
         if isOn != on {
+            isOn = on
             if action != nil {
                 NSApp.sendAction(action!, to: target, from: self)
             }
+        } else {
+            isOn = on
         }
         
-        isOn = on
         
         hasDragged = false
         isDraggingTowardsOn = false
