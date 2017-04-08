@@ -697,6 +697,9 @@
                             <userDefinedRuntimeAttribute type="image" keyPath="inactiveIcon" value="NSEnterFullScreenTemplate"/>
                             <userDefinedRuntimeAttribute type="image" keyPath="activeIcon" value="NSBookmarksTemplate"/>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="ignoreRatio" value="YES"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
+                                <color key="value" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
                             <action selector="switchPress:" target="Voe-Tx-rLC" id="Mqi-G6-fmv"/>

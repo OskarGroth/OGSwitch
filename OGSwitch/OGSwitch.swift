@@ -11,14 +11,42 @@ import QuartzCore
 
 public class OGSwitch : NSControl {
 
-    @IBInspectable public var tintColor: NSColor = NSColor(calibratedRed:0.27, green: 0.86, blue: 0.36, alpha: 1.0)
-    @IBInspectable public var knobBackgroundColor: NSColor = NSColor(calibratedWhite:1.0, alpha: 1.0)
-    @IBInspectable public var disabledBorderColor: NSColor = NSColor(calibratedWhite: 0.0, alpha: 0.2)
-    @IBInspectable public var disabledBackgroundColor: NSColor = NSColor.clear
-    @IBInspectable public var inactiveBackgroundColor: NSColor = NSColor(calibratedWhite: 0.0, alpha:0.3)
+    @IBInspectable public var tintColor: NSColor = NSColor(calibratedRed:0.27, green: 0.86, blue: 0.36, alpha: 1.0) {
+        didSet {
+            reloadLayer()
+        }
+    }
+    @IBInspectable public var knobBackgroundColor: NSColor = NSColor(calibratedWhite:1.0, alpha: 1.0) {
+        didSet {
+            reloadLayer()
+        }
+    }
+    @IBInspectable public var disabledBorderColor: NSColor = NSColor(calibratedWhite: 0.0, alpha: 0.2) {
+        didSet {
+            reloadLayer()
+        }
+    }
+    @IBInspectable public var disabledBackgroundColor: NSColor = NSColor.clear  {
+        didSet {
+            reloadLayer()
+        }
+    }
+    @IBInspectable public var inactiveBackgroundColor: NSColor = NSColor(calibratedWhite: 0.0, alpha:0.3) {
+        didSet {
+            reloadLayer()
+        }
+    }
     @IBInspectable public var animationDuration: TimeInterval = 0.4
-    @IBInspectable public var inactiveIcon: NSImage?
-    @IBInspectable public var activeIcon: NSImage?
+    @IBInspectable public var inactiveIcon: NSImage?  {
+        didSet {
+            reloadLayer()
+        }
+    }
+    @IBInspectable public var activeIcon: NSImage?  {
+        didSet {
+            reloadLayer()
+        }
+    }
     @IBInspectable public var ignoreRatio: Bool = false
     
     let kBorderLineWidth:CGFloat = 1.0
