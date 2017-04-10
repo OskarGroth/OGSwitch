@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name              = 'OGSwitch'
-s.version           = '1.5'
+s.version           = '1.7'
 s.summary           = 'Switch with icon'
 s.homepage          = 'https://github.com/OskarGroth/OGSwitch'
 s.license           = {
