@@ -30,6 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc func timer() {
         print("Trim is after now: \(switchButton.isOn)")
+        switchButton.setOn(isOn: !switchButton.isOn, animated: false)
     }
 
 }

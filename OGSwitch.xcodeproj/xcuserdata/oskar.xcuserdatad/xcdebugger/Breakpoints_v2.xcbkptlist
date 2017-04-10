@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "77"
             endingLineNumber = "77"
-            landmarkName = "setupIcon()"
+            landmarkName = "init(coder:)"
             landmarkType = "7">
             <Locations>
                <Location

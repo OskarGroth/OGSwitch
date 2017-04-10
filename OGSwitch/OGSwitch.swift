@@ -93,6 +93,13 @@ public class OGSwitch : NSControl {
         setupIcon()
     }
     
+    public func setOn(isOn: Bool, animated: Bool) {
+        if self.isOn != isOn {
+            self.isOn = isOn
+            reloadLayerAnimated(animated: animated)
+        }
+    }
+    
     internal func setupIcon() {
         guard let icon = inactiveIcon, let bounds = knobLayer?.bounds else {
             return
