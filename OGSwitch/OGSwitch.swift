@@ -63,6 +63,12 @@ public class OGSwitch : NSControl {
     public var knobLayer: CALayer?
     public var knobInsideLayer: CALayer?
     public var iconLayer = CALayer()
+    public var lockInteraction: Bool = false
+    override public var isEnabled: Bool {
+        didSet {
+            reloadLayerAnimated(animated: true)
+        }
+    }
     
     override public var acceptsFirstResponder: Bool {
         get {
@@ -179,16 +185,19 @@ public class OGSwitch : NSControl {
     }
     
     public func reloadLayerAnimated(animated: Bool) {
+        guard let backgroundLayer = backgroundLayer else {
+            return
+        }
         CATransaction.begin()
         CATransaction.setAnimationDuration(animated ? animationDuration : 0)
         
         if (hasDragged && isDraggingTowardsOn) || (!hasDragged && isOn) {
-            backgroundLayer!.borderColor = tintColor.cgColor
-            backgroundLayer!.backgroundColor = tintColor.cgColor
+            backgroundLayer.borderColor = tintColor.cgColor
+            backgroundLayer.backgroundColor = tintColor.cgColor
         }
         else {
-            backgroundLayer!.borderColor = disabledBorderColor.cgColor
-            backgroundLayer!.backgroundColor = disabledBackgroundColor.cgColor
+            backgroundLayer.borderColor = disabledBorderColor.cgColor
+            backgroundLayer.backgroundColor = disabledBackgroundColor.cgColor
         }
         
         if isEnabled {
@@ -258,7 +267,7 @@ public class OGSwitch : NSControl {
     
     
     override public func mouseDown(with theEvent: NSEvent) {
-        if !isEnabled {
+        if !isEnabled || lockInteraction {
             return
         }
         isActive = true
@@ -266,7 +275,7 @@ public class OGSwitch : NSControl {
     }
     
     override public func mouseDragged(with theEvent: NSEvent) {
-        if !isEnabled {
+        if !isEnabled || lockInteraction {
             return
         }
         
@@ -278,7 +287,7 @@ public class OGSwitch : NSControl {
     }
     
     override public func mouseUp(with theEvent: NSEvent) {
-        if !isEnabled {
+        if !isEnabled || lockInteraction  {
             return
         }
         
