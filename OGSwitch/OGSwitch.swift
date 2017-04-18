@@ -53,7 +53,7 @@ public class OGSwitch : NSControl {
     let kGoldenRatio:CGFloat = 1.6180339875
     let kDecreasedGoldenRatio:CGFloat = 1.38
     let kEnabledOpacity:Float = 1.0
-    let kDisabledOpacity:Float = 0.4
+    let kDisabledOpacity:Float = 0.5
     public var isOn:Bool = false
     public var isActive:Bool = false
     public var hasDragged:Bool  = false
@@ -145,7 +145,7 @@ public class OGSwitch : NSControl {
         knobLayer!.autoresizingMask = CAAutoresizingMask.layerHeightSizable
         knobLayer!.backgroundColor = knobBackgroundColor.cgColor
         knobLayer!.shadowColor = NSColor.black.cgColor
-        knobLayer!.shadowOffset = CGSize(width:0.0, height:-2.0)
+            knobLayer!.shadowOffset = CGSize(width:0.0, height:-2.0)
         knobLayer!.shadowRadius = 1.0
         knobLayer!.shadowOpacity = 0.3
         
@@ -200,12 +200,9 @@ public class OGSwitch : NSControl {
             backgroundLayer.backgroundColor = disabledBackgroundColor.cgColor
         }
         
-        if isEnabled {
-            rootLayer!.opacity = kEnabledOpacity
-        }
-        else {
-            rootLayer!.opacity = kDisabledOpacity
-        }
+        knobLayer?.shadowColor = isEnabled ? NSColor.black.cgColor : NSColor.clear.cgColor
+        rootLayer!.opacity = isEnabled ? kEnabledOpacity : kDisabledOpacity
+
         
         if hasDragged {
             let function = CAMediaTimingFunction(controlPoints: 0.25, 1.5, 0.5, 1)
