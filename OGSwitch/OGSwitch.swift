@@ -53,7 +53,7 @@ public class OGSwitch : NSControl {
     let kGoldenRatio:CGFloat = 1.6180339875
     let kDecreasedGoldenRatio:CGFloat = 1.38
     let kEnabledOpacity:Float = 1.0
-    let kDisabledOpacity:Float = 0.5
+    let kDisabledOpacity:Float = 0.4
     public var isOn:Bool = false
     public var isActive:Bool = false
     public var hasDragged:Bool  = false
