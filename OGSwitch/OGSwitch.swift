@@ -9,7 +9,9 @@
 import Cocoa
 import QuartzCore
 
-public class OGSwitch : NSControl {
+//Can not be NSControl due to 10.9 issues: https://github.com/iluuu1994/ITSwitch/issues/21
+
+public class OGSwitch : NSView {
 
     @IBInspectable public var tintColor: NSColor = NSColor(calibratedRed:0.27, green: 0.86, blue: 0.36, alpha: 1.0) {
         didSet {
@@ -54,6 +56,9 @@ public class OGSwitch : NSControl {
     let kDecreasedGoldenRatio:CGFloat = 1.38
     let kEnabledOpacity:Float = 1.0
     let kDisabledOpacity:Float = 0.5
+    var dragEvents = 0
+    public var action: Selector?
+    public var target: AnyObject?
     public var isOn:Bool = false
     public var isActive:Bool = false
     public var hasDragged:Bool  = false
@@ -64,7 +69,7 @@ public class OGSwitch : NSControl {
     public var knobInsideLayer: CALayer?
     public var iconLayer = CALayer()
     public var lockInteraction: Bool = false
-    override public var isEnabled: Bool {
+    public var isEnabled: Bool = true {
         didSet {
             reloadLayerAnimated(animated: true)
         }
@@ -78,13 +83,11 @@ public class OGSwitch : NSControl {
     
     required public init?(coder:NSCoder) {
         super.init(coder: coder)
-        
         setup()
     }
     
     override init(frame:NSRect) {
         super.init(frame: frame);
-        
         setup()
     }
     
@@ -129,7 +132,6 @@ public class OGSwitch : NSControl {
     internal func setupLayers() {
         rootLayer = CALayer()
         layer = rootLayer
-
         wantsLayer = true
         
         backgroundLayer = CALayer()
@@ -164,8 +166,7 @@ public class OGSwitch : NSControl {
         knobInsideLayer!.shadowRadius = 1.0
         knobInsideLayer!.shadowOpacity = 0.35
         knobLayer!.addSublayer(knobInsideLayer!)
-        
-        
+
         reloadLayerSize()
         reloadLayer()
     }
@@ -173,14 +174,11 @@ public class OGSwitch : NSControl {
     internal func reloadLayerSize() {
         CATransaction.begin()
         CATransaction.setDisableActions(true)
-        
         knobLayer!.frame = rectForKnob()
         knobInsideLayer!.frame = knobLayer!.bounds
-        
         backgroundLayer!.cornerRadius = backgroundLayer!.bounds.size.height / 2.0
         knobLayer!.cornerRadius = knobLayer!.bounds.size.height / 2.0
         knobInsideLayer!.cornerRadius = knobLayer!.bounds.size.height / 2.0
-        
         CATransaction.commit()
     }
     
@@ -203,7 +201,6 @@ public class OGSwitch : NSControl {
         knobLayer?.shadowColor = isEnabled ? NSColor.black.cgColor : NSColor.clear.cgColor
         rootLayer!.opacity = isEnabled ? kEnabledOpacity : kDisabledOpacity
 
-        
         if hasDragged {
             let function = CAMediaTimingFunction(controlPoints: 0.25, 1.5, 0.5, 1)
             CATransaction.setAnimationTimingFunction(function)
@@ -239,7 +236,6 @@ public class OGSwitch : NSControl {
                 width = Double((bounds.width - 2.0 * kBorderLineWidth) / kDecreasedGoldenRatio)
             }
         }
-
         
         var x:CGFloat = 0
         if (!hasDragged && !isOn) || (hasDragged && !isDraggingTowardsOn) {
@@ -264,6 +260,7 @@ public class OGSwitch : NSControl {
     
     
     override public func mouseDown(with theEvent: NSEvent) {
+        Swift.print("down")
         if !isEnabled || lockInteraction {
             return
         }
@@ -272,10 +269,14 @@ public class OGSwitch : NSControl {
     }
     
     override public func mouseDragged(with theEvent: NSEvent) {
+        dragEvents += 1
+        guard dragEvents > 3 else {
+            return
+        }
+        dragEvents = 0
         if !isEnabled || lockInteraction {
             return
         }
-        
         hasDragged = true
         
         let draggingPoint = convert(theEvent.locationInWindow, from: nil)
@@ -284,10 +285,11 @@ public class OGSwitch : NSControl {
     }
     
     override public func mouseUp(with theEvent: NSEvent) {
+        dragEvents = 0
         if !isEnabled || lockInteraction  {
             return
         }
-        
+
         var on = isOn
         isActive = false
         if hasDragged {
@@ -296,7 +298,7 @@ public class OGSwitch : NSControl {
         else {
             on = !isOn
         }
-        
+
         if isOn != on {
             isOn = on
             if action != nil {
@@ -305,7 +307,6 @@ public class OGSwitch : NSControl {
         } else {
             isOn = on
         }
-        
         
         hasDragged = false
         isDraggingTowardsOn = false

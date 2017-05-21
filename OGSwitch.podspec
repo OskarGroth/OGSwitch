@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
 
 s.name              = 'OGSwitch'
-s.version           = '1.8'
-s.summary           = 'Switch with icon'
+s.version           = '1.0'
+s.summary           = 'Switch control for macOS'
 s.homepage          = 'https://github.com/OskarGroth/OGSwitch'
 s.license           = {
 :type => 'MIT',
@@ -19,6 +19,6 @@ s.platform     = :osx, '10.9'
 s.source_files = 'OGSwitch/OGSwitch.{swift}'
 s.requires_arc = true
 s.screenshot   = ""
-s.social_media_url = "https://twitter.com/cindoriapps"
+s.social_media_url = "https://twitter.com/oskargroth"
 
 end
