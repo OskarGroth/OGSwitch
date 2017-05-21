@@ -21,6 +21,10 @@ You can now style your switch from the inspector:
 
 The same values can be accessed from your code.
 
+## Credits
+
+Inspired by ITSwitch by Ilija Tovilo.
+
 ## License
 The MIT License (MIT)
 
