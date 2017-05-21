@@ -1,7 +1,8 @@
 OGSwitch
 ==================
 
-Layer based Switch Control for macOS, with Interface Builder styling options.
+Layer based Switch Control for macOS, with Interface Builder styling options. Written in Swift.
+Supports animation, custom aspect ratios, and knob images.
 
 This is a `NSView` subclass that lets you create beautiful iOS-inspired switches easily.
 
