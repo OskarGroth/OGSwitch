@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -691,11 +691,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M7z-uc-a7v" customClass="OGSwitch" customModule="OGSwitchDemo" customModuleProvider="target">
-                        <rect key="frame" x="129" y="161" width="163" height="96"/>
+                        <rect key="frame" x="159" y="201" width="163" height="96"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="inactiveIcon" value="NSEnterFullScreenTemplate"/>
-                            <userDefinedRuntimeAttribute type="image" keyPath="activeIcon" value="NSBookmarksTemplate"/>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="ignoreRatio" value="YES"/>
                             <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
                                 <color key="value" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -705,12 +703,27 @@
                             <action selector="switchPress:" target="Voe-Tx-rLC" id="Mqi-G6-fmv"/>
                         </connections>
                     </customView>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Brb-kf-Oxi" customClass="OGSwitch" customModule="OGSwitchDemo" customModuleProvider="target">
+                        <rect key="frame" x="159" y="63" width="163" height="96"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="activeIcon" value="checkmark"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="ignoreRatio" value="YES"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
+                                <color key="value" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="image" keyPath="inactiveIcon" value="checkmark"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="switchPress:" target="Voe-Tx-rLC" id="tTg-hX-q3I"/>
+                        </connections>
+                    </customView>
                 </subviews>
             </view>
+            <point key="canvasLocation" x="86" y="-105"/>
         </window>
     </objects>
     <resources>
-        <image name="NSBookmarksTemplate" width="17" height="18"/>
-        <image name="NSEnterFullScreenTemplate" width="15" height="15"/>
+        <image name="checkmark" width="35" height="34"/>
     </resources>
 </document>
