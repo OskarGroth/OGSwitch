@@ -260,7 +260,6 @@ public class OGSwitch : NSView {
     
     
     override public func mouseDown(with theEvent: NSEvent) {
-        Swift.print("down")
         if !isEnabled || lockInteraction {
             return
         }
