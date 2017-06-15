@@ -12,7 +12,7 @@ import QuartzCore
 //Can not be NSControl due to 10.9 issues: https://github.com/iluuu1994/ITSwitch/issues/21
 
 public class OGSwitch : NSView {
-
+    
     @IBInspectable public var tintColor: NSColor = NSColor(calibratedRed:0.27, green: 0.86, blue: 0.36, alpha: 1.0) {
         didSet {
             reloadLayer()
@@ -133,12 +133,13 @@ public class OGSwitch : NSView {
         rootLayer = CALayer()
         layer = rootLayer
         wantsLayer = true
-        
+        layer?.masksToBounds = false
         backgroundLayer = CALayer()
         backgroundLayer!.autoresizingMask = [.layerWidthSizable, .layerHeightSizable]
         backgroundLayer!.bounds = rootLayer!.bounds
         backgroundLayer!.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         backgroundLayer!.borderWidth = kBorderLineWidth
+        backgroundLayer?.masksToBounds = false
         
         rootLayer!.addSublayer(backgroundLayer!)
         
@@ -147,10 +148,10 @@ public class OGSwitch : NSView {
         knobLayer!.autoresizingMask = CAAutoresizingMask.layerHeightSizable
         knobLayer!.backgroundColor = knobBackgroundColor.cgColor
         knobLayer!.shadowColor = NSColor.black.cgColor
-            knobLayer!.shadowOffset = CGSize(width:0.0, height:-2.0)
+        knobLayer!.shadowOffset = CGSize(width:0.0, height:-2.0)
         knobLayer!.shadowRadius = 1.0
         knobLayer!.shadowOpacity = 0.3
-        
+        knobLayer?.masksToBounds = false
         rootLayer!.addSublayer(knobLayer!)
         
         knobInsideLayer = CALayer()
@@ -166,7 +167,7 @@ public class OGSwitch : NSView {
         knobInsideLayer!.shadowRadius = 1.0
         knobInsideLayer!.shadowOpacity = 0.35
         knobLayer!.addSublayer(knobInsideLayer!)
-
+        
         reloadLayerSize()
         reloadLayer()
     }
@@ -200,7 +201,7 @@ public class OGSwitch : NSView {
         
         knobLayer?.shadowColor = isEnabled ? NSColor.black.cgColor : NSColor.clear.cgColor
         rootLayer!.opacity = isEnabled ? kEnabledOpacity : kDisabledOpacity
-
+        
         if hasDragged {
             let function = CAMediaTimingFunction(controlPoints: 0.25, 1.5, 0.5, 1)
             CATransaction.setAnimationTimingFunction(function)
@@ -288,7 +289,7 @@ public class OGSwitch : NSView {
         if !isEnabled || lockInteraction  {
             return
         }
-
+        
         var on = isOn
         isActive = false
         if hasDragged {
@@ -297,7 +298,7 @@ public class OGSwitch : NSView {
         else {
             on = !isOn
         }
-
+        
         if isOn != on {
             isOn = on
             if action != nil {
@@ -314,3 +315,4 @@ public class OGSwitch : NSView {
     }
     
 }
+
