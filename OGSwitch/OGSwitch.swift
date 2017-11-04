@@ -57,8 +57,8 @@ public class OGSwitch : NSView {
     let kEnabledOpacity:Float = 1.0
     let kDisabledOpacity:Float = 0.5
     var dragEvents = 0
-    public var action: Selector?
-    public var target: AnyObject?
+    @objc public var action: Selector?
+    @objc public var target: AnyObject?
     public var isOn:Bool = false
     public var isActive:Bool = false
     public var hasDragged:Bool  = false
