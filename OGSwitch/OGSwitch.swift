@@ -90,6 +90,12 @@ public class OGSwitch : NSView {
         super.init(frame: frame);
         setup()
     }
+
+    override public func awakeFromNib() {
+        super.awakeFromNib()
+        reloadLayerSize()
+        reloadLayer()
+    }
     
     internal func setup() {
         isEnabled = true
