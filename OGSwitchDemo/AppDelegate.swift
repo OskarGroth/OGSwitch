@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import OGSwitch
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {

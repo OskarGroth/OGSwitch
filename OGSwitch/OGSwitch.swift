@@ -95,17 +95,12 @@ public class OGSwitch : NSView {
         super.awakeFromNib()
         reloadLayerSize()
         reloadLayer()
+        setupIcon()
     }
     
     internal func setup() {
         isEnabled = true
         setupLayers()
-    }
-    
-    public override func awakeFromNib() {
-        super.awakeFromNib()
-        reloadLayerSize()
-        setupIcon()
     }
     
     public func setOn(isOn: Bool, animated: Bool) {
@@ -130,7 +125,7 @@ public class OGSwitch : NSView {
         animation.fromValue = iconLayer.contents
         animation.duration = 0.5
         animation.isRemovedOnCompletion = false
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = .forwards
         iconLayer.add(animation, forKey: "contents")
         iconLayer.setValue(animation.toValue, forKey: "contents")
     }
