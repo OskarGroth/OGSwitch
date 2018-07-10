@@ -9,10 +9,10 @@ This is a `NSView` subclass that lets you create beautiful iOS-inspired switches
 
 ![OGSwitch for macOS](https://s3.amazonaws.com/cindori/images/ogswitch.png "OGSwitch for macOS")
 
-## Installation (CocoaPods)
-Configure your Podfile to use `OGSwitch`:
+## Installation (Carthage)
+Configure your Cartfile to use `OGSwitch`:
 
-```pod 'OGSwitch'```
+```github "OskarGroth/OGSwitch" ~> 2.0```
 
 ## Usage
 
