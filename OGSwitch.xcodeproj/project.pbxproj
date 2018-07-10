@@ -14,6 +14,7 @@
 		7553A35520F5045900EEA571 /* OGSwitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7553A34E20F5045900EEA571 /* OGSwitch.framework */; };
 		7553A35620F5045900EEA571 /* OGSwitch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7553A34E20F5045900EEA571 /* OGSwitch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7553A35B20F5045F00EEA571 /* OGSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750F2E441E5D2CE100C20E79 /* OGSwitch.swift */; };
+		7553A35C20F5088A00EEA571 /* OGSwitch.swift in Headers */ = {isa = PBXBuildFile; fileRef = 750F2E441E5D2CE100C20E79 /* OGSwitch.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7553A35220F5045900EEA571 /* OGSwitch.h in Headers */,
+				7553A35C20F5088A00EEA571 /* OGSwitch.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
