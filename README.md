@@ -12,7 +12,7 @@ This is a `NSView` subclass that lets you create beautiful iOS-inspired switches
 ## Installation (Carthage)
 Configure your Cartfile to use `OGSwitch`:
 
-```github "OskarGroth/OGSwitch" ~ 2.0```
+```github "OskarGroth/OGSwitch" ~> 2.0```
 
 ## Usage
 
