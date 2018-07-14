@@ -9,6 +9,11 @@ This is a `NSView` subclass that lets you create beautiful iOS-inspired switches
 
 ![OGSwitch for macOS](https://s3.amazonaws.com/cindori/images/ogswitch.png "OGSwitch for macOS")
 
+`OGSwitch` now also supports `IBDesignable` and renders directly in Interface Builder:
+
+![IBDesignable](https://imgur.com/50ea93af-8de0-4835-b234-16e16cc3457c "IBDesignable")
+
+
 ## Installation (Carthage)
 Configure your Cartfile to use `OGSwitch`:
 
