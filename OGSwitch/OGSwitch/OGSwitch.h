@@ -2,7 +2,7 @@
 //  OGSwitch.h
 //  OGSwitch
 //
-//  Created by Oskar Groth on 2018-07-10.
+//  Created by Oskar Groth on 2018-07-14.
 //  Copyright © 2018 Oskar Groth. All rights reserved.
 //
 

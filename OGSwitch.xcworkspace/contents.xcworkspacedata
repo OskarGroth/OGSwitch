@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:/Users/oskar/Dev/OGSwitch/OGSwitch-Demo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:OGSwitch/OGSwitch.xcodeproj">
+   </FileRef>
+</Workspace>
