@@ -11,7 +11,7 @@ This is a `NSView` subclass that lets you create beautiful iOS-inspired switches
 
 `OGSwitch` now also supports `IBDesignable` and renders directly in Interface Builder:
 
-![IBDesignable](https://i.imgur.com/F86YoKv.png "IBDesignable")
+![IBDesignable](https://i.imgur.com/BKUyWGg.png "IBDesignable")
 
 
 ## Installation (Carthage)
