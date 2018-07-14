@@ -49,7 +49,16 @@ import QuartzCore
             reloadLayer()
         }
     }
-    @IBInspectable public var ignoreRatio: Bool = false
+    @IBInspectable public var ignoreRatio: Bool = false {
+        didSet {
+            reloadLayer()
+        }
+    }
+    @IBInspectable public var isEnabled: Bool = true {
+        didSet {
+            reloadLayerAnimated(animated: true)
+        }
+    }
     
     let kBorderLineWidth:CGFloat = 1.0
     let kGoldenRatio:CGFloat = 1.6180339875
@@ -69,11 +78,6 @@ import QuartzCore
     public var knobInsideLayer: CALayer?
     public var iconLayer = CALayer()
     public var lockInteraction: Bool = false
-    public var isEnabled: Bool = true {
-        didSet {
-            reloadLayerAnimated(animated: true)
-        }
-    }
     
     override public var acceptsFirstResponder: Bool {
         get {

@@ -35,8 +35,6 @@
 		750F2E511E5D2D7200C20E79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		750F2E531E5D2D7200C20E79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75256FE120FA5ABC00ED6782 /* OGSwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = OGSwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7553A35020F5045900EEA571 /* OGSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OGSwitch.h; sourceTree = "<group>"; };
-		7553A35120F5045900EEA571 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				750F2E4B1E5D2D7100C20E79 /* OGSwitchDemo */,
-				7553A34F20F5045900EEA571 /* OGSwitch */,
 				750F2E3A1E5D2CD000C20E79 /* Products */,
 				75256FE020FA5ABC00ED6782 /* Frameworks */,
 			);
@@ -86,15 +83,6 @@
 				75256FE120FA5ABC00ED6782 /* OGSwitch.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7553A34F20F5045900EEA571 /* OGSwitch */ = {
-			isa = PBXGroup;
-			children = (
-				7553A35020F5045900EEA571 /* OGSwitch.h */,
-				7553A35120F5045900EEA571 /* Info.plist */,
-			);
-			path = OGSwitch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
