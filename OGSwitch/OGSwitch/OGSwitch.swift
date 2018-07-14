@@ -11,7 +11,7 @@ import QuartzCore
 
 //Can not be NSControl due to 10.9 issues: https://github.com/iluuu1994/ITSwitch/issues/21
 
-public class OGSwitch : NSView {
+@IBDesignable public class OGSwitch : NSView {
     
     @IBInspectable public var tintColor: NSColor = NSColor(calibratedRed:0.27, green: 0.86, blue: 0.36, alpha: 1.0) {
         didSet {

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		75256FD820FA5A0E00ED6782 /* OGSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = 75256FD620FA5A0E00ED6782 /* OGSwitch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		75256FDF20FA5A3E00ED6782 /* OGSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75256FDE20FA5A3E00ED6782 /* OGSwitch.swift */; };
-		753FF19F20FA621C00DFA33E /* OGSwitch.swift in Headers */ = {isa = PBXBuildFile; fileRef = 75256FDE20FA5A3E00ED6782 /* OGSwitch.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		753FF1A520FA64B500DFA33E /* OGSwitch.swift in Headers */ = {isa = PBXBuildFile; fileRef = 75256FDE20FA5A3E00ED6782 /* OGSwitch.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		753FF1A620FA64D200DFA33E /* OGSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = 75256FD620FA5A0E00ED6782 /* OGSwitch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,8 +63,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75256FD820FA5A0E00ED6782 /* OGSwitch.h in Headers */,
-				753FF19F20FA621C00DFA33E /* OGSwitch.swift in Headers */,
+				753FF1A620FA64D200DFA33E /* OGSwitch.h in Headers */,
+				753FF1A520FA64B500DFA33E /* OGSwitch.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
