@@ -681,7 +681,7 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="OGSwitch-DemoDemo" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+        <window title="OGSwitch-Demo" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
@@ -696,7 +696,7 @@
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="ignoreRatio" value="YES"/>
                             <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
-                                <color key="value" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="isEnabled" value="YES"/>
                         </userDefinedRuntimeAttributes>
@@ -721,7 +721,7 @@
                     </customView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="86" y="-105"/>
+            <point key="canvasLocation" x="198" y="-127"/>
         </window>
     </objects>
     <resources>
