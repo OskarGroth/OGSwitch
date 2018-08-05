@@ -19,6 +19,8 @@ Configure your Cartfile to use `OGSwitch`:
 
 ```github "OskarGroth/OGSwitch" ~> 2.0```
 
+`OGSwitch` requires Swift 4.2.
+
 ## Usage
 
 Create a custom `NSView` in Interface Builder and set it's class to `OGSwitch`.
