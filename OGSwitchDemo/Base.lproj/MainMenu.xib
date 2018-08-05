@@ -698,7 +698,6 @@
                             <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
                                 <color key="value" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
                             </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="isEnabled" value="YES"/>
                         </userDefinedRuntimeAttributes>
                         <connections>
                             <action selector="switchPress:" target="Voe-Tx-rLC" id="Mqi-G6-fmv"/>

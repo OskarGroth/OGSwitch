@@ -24,7 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @IBAction func switchPress(_ sender: Any) {
-        NSLog("Switch is now: \(switchButton.isOn)")
+        NSLog("Switch is now: \((sender as! OGSwitch).isOn)")
        // perform(#selector(timer), with: nil, afterDelay: 3)
     }
     

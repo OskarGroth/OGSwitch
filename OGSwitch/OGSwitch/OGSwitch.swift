@@ -11,7 +11,7 @@ import QuartzCore
 
 //Can not be NSControl due to 10.9 issues: https://github.com/iluuu1994/ITSwitch/issues/21
 
-@IBDesignable public class OGSwitch : NSView {
+@IBDesignable public class OGSwitch: NSControl {
     
     @IBInspectable public var tintColor: NSColor = NSColor(calibratedRed:0.27, green: 0.86, blue: 0.36, alpha: 1.0) {
         didSet {
@@ -54,7 +54,7 @@ import QuartzCore
             reloadLayer()
         }
     }
-    @IBInspectable public var isEnabled: Bool = true {
+    override public var isEnabled: Bool {
         didSet {
             reloadLayerAnimated(animated: true)
         }
@@ -66,8 +66,6 @@ import QuartzCore
     let kEnabledOpacity:Float = 1.0
     let kDisabledOpacity:Float = 0.5
     var dragEvents = 0
-    @objc public var action: Selector?
-    @objc public var target: AnyObject?
     public var isOn:Bool = false
     public var isActive:Bool = false
     public var hasDragged:Bool  = false
