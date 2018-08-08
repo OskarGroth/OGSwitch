@@ -13,6 +13,25 @@ import QuartzCore
 
 @IBDesignable public class OGSwitch: NSControl {
     
+    public enum Size {
+        
+        case small
+        case medium
+        case large
+        
+        public var size: CGSize {
+            switch self {
+            case .small:
+                return CGSize(width: 46, height: 28)
+            case .medium:
+                return CGSize(width: 56, height: 34)
+            case .large:
+                return CGSize(width: 69, height: 41)
+            }
+        }
+        
+    }
+    
     @IBInspectable public var tintColor: NSColor = NSColor(calibratedRed:0.27, green: 0.86, blue: 0.36, alpha: 1.0) {
         didSet {
             reloadLayer()
@@ -60,7 +79,8 @@ import QuartzCore
         }
     }
     
-    let kBorderLineWidth:CGFloat = 1.0
+    lazy var kBorderLineWidth: CGFloat = bounds.height*(2/31)
+    
     let kGoldenRatio:CGFloat = 1.6180339875
     let kDecreasedGoldenRatio:CGFloat = 1.38
     let kEnabledOpacity:Float = 1.0
@@ -92,7 +112,7 @@ import QuartzCore
         super.init(frame: frame);
         setup()
     }
-
+    
     override public func awakeFromNib() {
         super.awakeFromNib()
         reloadLayerSize()
@@ -151,9 +171,9 @@ import QuartzCore
         knobLayer!.autoresizingMask = CAAutoresizingMask.layerHeightSizable
         knobLayer!.backgroundColor = knobBackgroundColor.cgColor
         knobLayer!.shadowColor = NSColor.black.cgColor
-        knobLayer!.shadowOffset = CGSize(width:0.0, height:-2.0)
-        knobLayer!.shadowRadius = 1.0
-        knobLayer!.shadowOpacity = 0.3
+        knobLayer!.shadowOffset = CGSize(width:0.0, height:-6.5)
+        knobLayer!.shadowRadius = 2.5
+        knobLayer!.shadowOpacity = 0.15
         knobLayer?.masksToBounds = false
         rootLayer!.addSublayer(knobLayer!)
         

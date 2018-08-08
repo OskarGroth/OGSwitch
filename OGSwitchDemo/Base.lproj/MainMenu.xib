@@ -704,18 +704,42 @@
                         </connections>
                     </customView>
                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Brb-kf-Oxi" customClass="OGSwitch" customModule="OGSwitch">
-                        <rect key="frame" x="159" y="63" width="163" height="96"/>
+                        <rect key="frame" x="140" y="60" width="46" height="28"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="activeIcon" value="checkmark"/>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="ignoreRatio" value="YES"/>
                             <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
                                 <color key="value" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="image" keyPath="inactiveIcon" value="checkmark"/>
                         </userDefinedRuntimeAttributes>
                         <connections>
                             <action selector="switchPress:" target="Voe-Tx-rLC" id="tTg-hX-q3I"/>
+                        </connections>
+                    </customView>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dPq-0j-nKi" customClass="OGSwitch" customModule="OGSwitch">
+                        <rect key="frame" x="272" y="53" width="69" height="41"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="ignoreRatio" value="YES"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
+                                <color key="value" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="switchPress:" target="Voe-Tx-rLC" id="buu-wq-UpG"/>
+                        </connections>
+                    </customView>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1VD-pu-2Ej" customClass="OGSwitch" customModule="OGSwitch">
+                        <rect key="frame" x="200" y="57" width="56" height="34"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="ignoreRatio" value="YES"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="disabledBackgroundColor">
+                                <color key="value" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="switchPress:" target="Voe-Tx-rLC" id="wRK-Gm-efR"/>
                         </connections>
                     </customView>
                 </subviews>
@@ -723,7 +747,4 @@
             <point key="canvasLocation" x="198" y="-127"/>
         </window>
     </objects>
-    <resources>
-        <image name="checkmark" width="35" height="34"/>
-    </resources>
 </document>
