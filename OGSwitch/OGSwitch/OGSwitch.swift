@@ -68,7 +68,7 @@ import QuartzCore
             reloadLayer()
         }
     }
-    @IBInspectable public var ignoreRatio: Bool = false {
+    @IBInspectable public var ignoreRatio: Bool = true {
         didSet {
             reloadLayer()
         }
@@ -121,10 +121,10 @@ import QuartzCore
         isEnabled = true
         setupLayers()
         reloadLayerSize()
-        reloadLayer()
         setupIcon()
+        reloadLayer()
     }
-    
+        
     public func setOn(isOn: Bool, animated: Bool) {
         if self.isOn != isOn {
             self.isOn = isOn
