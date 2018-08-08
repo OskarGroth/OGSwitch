@@ -108,7 +108,11 @@ import QuartzCore
         setup()
     }
     
-    override init(frame:NSRect) {
+    convenience public init(size: CGSize) {
+        self.init(frame: NSRect(origin: .zero, size: size))
+    }
+    
+    override public init(frame:NSRect) {
         super.init(frame: frame);
         setup()
     }
