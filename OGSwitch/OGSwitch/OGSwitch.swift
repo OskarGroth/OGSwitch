@@ -117,16 +117,12 @@ import QuartzCore
         setup()
     }
     
-    override public func awakeFromNib() {
-        super.awakeFromNib()
-        reloadLayerSize()
-        reloadLayer()
-        setupIcon()
-    }
-    
     internal func setup() {
         isEnabled = true
         setupLayers()
+        reloadLayerSize()
+        reloadLayer()
+        setupIcon()
     }
     
     public func setOn(isOn: Bool, animated: Bool) {
