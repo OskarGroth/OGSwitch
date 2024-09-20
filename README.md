@@ -7,11 +7,11 @@ Supports animation, custom aspect ratios, and knob images.
 
 This is a `NSView` subclass that lets you create beautiful iOS-inspired switches easily.
 
-![OGSwitch for macOS](https://s3.amazonaws.com/cindori/images/ogswitch.png "OGSwitch for macOS")
+![OGSwitch for macOS](ogswitch.jpg)
 
 `OGSwitch` now also supports `IBDesignable` and renders directly in Interface Builder:
 
-![IBDesignable](https://i.imgur.com/BKUyWGg.png "IBDesignable")
+![OGSwitch for macOS](ogswitch-dark.png)
 
 
 ## Installation (Carthage)
@@ -26,7 +26,7 @@ Configure your Cartfile to use `OGSwitch`:
 Create a custom `NSView` in Interface Builder and set it's class to `OGSwitch`.
 You can now style your switch from the inspector:
 
-![OGSwitch for macOS](https://s3.amazonaws.com/cindori/images/inspector-ogswitch.png "OGSwitch for macOS")
+![OGSwitch for macOS](inspector.png)
 
 The same values can be accessed from your code.
 
