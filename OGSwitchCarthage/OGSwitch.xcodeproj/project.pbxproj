@@ -7,20 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		75256FDF20FA5A3E00ED6782 /* OGSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75256FDE20FA5A3E00ED6782 /* OGSwitch.swift */; };
-		753FF1A520FA64B500DFA33E /* OGSwitch.swift in Headers */ = {isa = PBXBuildFile; fileRef = 75256FDE20FA5A3E00ED6782 /* OGSwitch.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		753FF1A620FA64D200DFA33E /* OGSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = 75256FD620FA5A0E00ED6782 /* OGSwitch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		619DDCE426A5AD7900932ACF /* OGSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619DDCE326A5AD7900932ACF /* OGSwitch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		75256FD320FA5A0E00ED6782 /* OGSwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OGSwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		75256FD620FA5A0E00ED6782 /* OGSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OGSwitch.h; sourceTree = "<group>"; };
-		75256FD720FA5A0E00ED6782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75256FDE20FA5A3E00ED6782 /* OGSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGSwitch.swift; sourceTree = "<group>"; };
+		619DDCD126A5AA0700932ACF /* OGSwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OGSwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		619DDCE126A5AD3B00932ACF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		619DDCE326A5AD7900932ACF /* OGSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OGSwitch.swift; path = ../OGSwitch/Sources/OGSwitch/OGSwitch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		75256FD020FA5A0E00ED6782 /* Frameworks */ = {
+		619DDCCE26A5AA0700932ACF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -30,55 +27,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		75256FC920FA5A0E00ED6782 = {
+		619DDCC726A5AA0700932ACF = {
 			isa = PBXGroup;
 			children = (
-				75256FD520FA5A0E00ED6782 /* OGSwitch */,
-				75256FD420FA5A0E00ED6782 /* Products */,
+				619DDCE326A5AD7900932ACF /* OGSwitch.swift */,
+				619DDCE126A5AD3B00932ACF /* Info.plist */,
+				619DDCD226A5AA0700932ACF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		75256FD420FA5A0E00ED6782 /* Products */ = {
+		619DDCD226A5AA0700932ACF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				75256FD320FA5A0E00ED6782 /* OGSwitch.framework */,
+				619DDCD126A5AA0700932ACF /* OGSwitch.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		75256FD520FA5A0E00ED6782 /* OGSwitch */ = {
-			isa = PBXGroup;
-			children = (
-				75256FDE20FA5A3E00ED6782 /* OGSwitch.swift */,
-				75256FD620FA5A0E00ED6782 /* OGSwitch.h */,
-				75256FD720FA5A0E00ED6782 /* Info.plist */,
-			);
-			path = OGSwitch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		75256FCE20FA5A0E00ED6782 /* Headers */ = {
+		619DDCCC26A5AA0700932ACF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				753FF1A620FA64D200DFA33E /* OGSwitch.h in Headers */,
-				753FF1A520FA64B500DFA33E /* OGSwitch.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		75256FD220FA5A0E00ED6782 /* OGSwitch */ = {
+		619DDCD026A5AA0700932ACF /* OGSwitch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 75256FDB20FA5A0E00ED6782 /* Build configuration list for PBXNativeTarget "OGSwitch" */;
+			buildConfigurationList = 619DDCD926A5AA0700932ACF /* Build configuration list for PBXNativeTarget "OGSwitch" */;
 			buildPhases = (
-				75256FCE20FA5A0E00ED6782 /* Headers */,
-				75256FCF20FA5A0E00ED6782 /* Sources */,
-				75256FD020FA5A0E00ED6782 /* Frameworks */,
-				75256FD120FA5A0E00ED6782 /* Resources */,
+				619DDCCC26A5AA0700932ACF /* Headers */,
+				619DDCCD26A5AA0700932ACF /* Sources */,
+				619DDCCE26A5AA0700932ACF /* Frameworks */,
+				619DDCCF26A5AA0700932ACF /* Resources */,
 			);
 			buildRules = (
 			);
@@ -86,43 +72,42 @@
 			);
 			name = OGSwitch;
 			productName = OGSwitch;
-			productReference = 75256FD320FA5A0E00ED6782 /* OGSwitch.framework */;
+			productReference = 619DDCD126A5AA0700932ACF /* OGSwitch.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		75256FCA20FA5A0E00ED6782 /* Project object */ = {
+		619DDCC826A5AA0700932ACF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1000;
-				ORGANIZATIONNAME = "Oskar Groth";
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					75256FD220FA5A0E00ED6782 = {
-						CreatedOnToolsVersion = 10.0;
-						LastSwiftMigration = 1000;
+					619DDCD026A5AA0700932ACF = {
+						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
 			};
-			buildConfigurationList = 75256FCD20FA5A0E00ED6782 /* Build configuration list for PBXProject "OGSwitch" */;
+			buildConfigurationList = 619DDCCB26A5AA0700932ACF /* Build configuration list for PBXProject "OGSwitch" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
-			mainGroup = 75256FC920FA5A0E00ED6782;
-			productRefGroup = 75256FD420FA5A0E00ED6782 /* Products */;
+			mainGroup = 619DDCC726A5AA0700932ACF;
+			productRefGroup = 619DDCD226A5AA0700932ACF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				75256FD220FA5A0E00ED6782 /* OGSwitch */,
+				619DDCD026A5AA0700932ACF /* OGSwitch */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		75256FD120FA5A0E00ED6782 /* Resources */ = {
+		619DDCCF26A5AA0700932ACF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -132,18 +117,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		75256FCF20FA5A0E00ED6782 /* Sources */ = {
+		619DDCCD26A5AA0700932ACF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75256FDF20FA5A3E00ED6782 /* OGSwitch.swift in Sources */,
+				619DDCE426A5AD7900932ACF /* OGSwitch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		75256FD920FA5A0E00ED6782 /* Debug */ = {
+		619DDCD726A5AA0700932ACF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -169,13 +154,13 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -195,8 +180,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -206,7 +192,7 @@
 			};
 			name = Debug;
 		};
-		75256FDA20FA5A0E00ED6782 /* Release */ = {
+		619DDCD826A5AA0700932ACF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -232,13 +218,13 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -252,8 +238,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -262,85 +249,76 @@
 			};
 			name = Release;
 		};
-		75256FDC20FA5A0E00ED6782 /* Debug */ = {
+		619DDCDA26A5AA0700932ACF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = ZQK6SX26CE;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = OGSwitch/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = org.cindori.OGSwitch;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = OGSwitch;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		75256FDD20FA5A0E00ED6782 /* Release */ = {
+		619DDCDB26A5AA0700932ACF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = ZQK6SX26CE;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = OGSwitch/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = org.cindori.OGSwitch;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = OGSwitch;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		75256FCD20FA5A0E00ED6782 /* Build configuration list for PBXProject "OGSwitch" */ = {
+		619DDCCB26A5AA0700932ACF /* Build configuration list for PBXProject "OGSwitch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				75256FD920FA5A0E00ED6782 /* Debug */,
-				75256FDA20FA5A0E00ED6782 /* Release */,
+				619DDCD726A5AA0700932ACF /* Debug */,
+				619DDCD826A5AA0700932ACF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		75256FDB20FA5A0E00ED6782 /* Build configuration list for PBXNativeTarget "OGSwitch" */ = {
+		619DDCD926A5AA0700932ACF /* Build configuration list for PBXNativeTarget "OGSwitch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				75256FDC20FA5A0E00ED6782 /* Debug */,
-				75256FDD20FA5A0E00ED6782 /* Release */,
+				619DDCDA26A5AA0700932ACF /* Debug */,
+				619DDCDB26A5AA0700932ACF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 75256FCA20FA5A0E00ED6782 /* Project object */;
+	rootObject = 619DDCC826A5AA0700932ACF /* Project object */;
 }

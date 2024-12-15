@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/oskar/Dev/OGSwitch/OGSwitch-Demo.xcodeproj">
+      location = "group:OGSwitchCarthage/OGSwitch.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:OGSwitch/OGSwitch.xcodeproj">
+      location = "group:OGSwitch">
+   </FileRef>
+   <FileRef
+      location = "group:OGSwitchDemo/OGSwitchDemo.xcodeproj">
    </FileRef>
 </Workspace>
